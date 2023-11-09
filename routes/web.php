@@ -22,3 +22,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function() {
     return "hola mundo";
 });
+
+
+Route::get('contacto', function() {
+    return "welcome my portafolio";
+});
+
+
+Route::get('saludo/{nombre?}', function($nombre = "Invitado") {
+    return "Saludos " . $nombre;
+});
