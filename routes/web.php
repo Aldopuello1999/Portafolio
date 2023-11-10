@@ -19,16 +19,24 @@ use Illuminate\Support\Facades\Route;
 
 
 
+// Route::get('/', function() {
+//     return "hola mundo";
+// });
+
+
+Route::get('contactanos', function() {
+    return "seccion de contacto";
+})->name('contactos');
+
+
 Route::get('/', function() {
-    return "hola mundo";
+    echo "<a href='". route('contactos') . "'>Contactos 1<a/><br>";
+    echo "<a href='". route('contactos') . "'>Contactos 2<a/><br>";
+    echo "<a href='". route('contactos') . "'>Contactos 3<a/><br>";
+    echo "<a href='". route('contactos') . "'>Contactos 4<a/><br>";
+    echo "<a href='". route('contactos') . "'>Contactos 5<a/><br>";
 });
 
-
-Route::get('contacto', function() {
-    return "welcome my portafolio";
-});
-
-
-Route::get('saludo/{nombre?}', function($nombre = "Invitado") {
-    return "Saludos " . $nombre;
-});
+// Route::get('saludo/{nombre?}', function($nombre = "Invitado") {
+//     return "Saludos " . $nombre;
+// });
