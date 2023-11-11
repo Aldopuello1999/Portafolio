@@ -13,30 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::view('/', 'home')->name('home');
+Route::view('/about', 'about')->name('about');
+Route::view('/portafolio', 'portafolio')->name('portafolio');
+Route::view('/contact', 'contact')->name('contact');
+
+
 // Route::get('/', function () {
-//     return view('welcome');
-// });
+//     $nombre = "Aldo";
+//     return view('home',compact('nombre'));
+// })->name('home');
 
-
-
-// Route::get('/', function() {
-//     return "hola mundo";
-// });
-
-
-Route::get('contactanos', function() {
-    return "seccion de contacto";
-})->name('contactos');
-
-
-Route::get('/', function() {
-    echo "<a href='". route('contactos') . "'>Contactos 1<a/><br>";
-    echo "<a href='". route('contactos') . "'>Contactos 2<a/><br>";
-    echo "<a href='". route('contactos') . "'>Contactos 3<a/><br>";
-    echo "<a href='". route('contactos') . "'>Contactos 4<a/><br>";
-    echo "<a href='". route('contactos') . "'>Contactos 5<a/><br>";
-});
-
-// Route::get('saludo/{nombre?}', function($nombre = "Invitado") {
-//     return "Saludos " . $nombre;
-// });
