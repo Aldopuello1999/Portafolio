@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {{-- icono --}}
-    <link rel="icon" href="">
-    <title>Portafolio</title>
-</head>
-<body>
-    <h1>Contact</h1>
+@extends('layout.layout')
 
-</body>
-</html>
+
+@section('title','Contact')
+
+{{-- por parametro recibe el nombre de donde vamos a insertar esta seccion  --}}
+@section('content')
+    <h1>Contact</h1>
+@endsection
+

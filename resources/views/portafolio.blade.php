@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {{-- icono --}}
-    <link rel="icon" href="">
-    <title>Portafolio</title>
-</head>
-<body>
+@extends('layout.layout')
+
+
+@section('title','Portafolio')
+
+
+{{-- por parametro recibe el nombre de donde vamos a insertar esta seccion  --}}
+@section('content')
     <h1>Portafolio</h1>
-</body>
-</html>
+@endsection
+
