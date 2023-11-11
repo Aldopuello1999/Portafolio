@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PortafolioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,16 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-$portafolio = [
-    ['title' => 'Proyecto #1'],
-    ['title' => 'Proyecto #2'],
-    ['title' => 'Proyecto #3'],
-    ['title' => 'Proyecto #4'],
-];
+// Route::get('/usuario', [UserController::class, 'index'])->name('usuario.index');  guia
+
+
 
 Route::view('/', 'home')->name('home');
 Route::view('/about', 'about')->name('about');
-Route::view('/portafolio', 'portafolio', compact('portafolio'))->name('portafolio');
+Route::get('/portafolio', [PortafolioController::class, '__invoke'])->name('portafolio');
 Route::view('/contact', 'contact')->name('contact');
 
 
