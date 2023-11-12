@@ -7,11 +7,10 @@ use Illuminate\Http\Request;
 class PortafolioController extends Controller
 {
     /**
-     * Handle the incoming request.
+     * Display a listing of the resource.
      */
-    public function __invoke(Request $request)
+    public function index()
     {
-
         $portafolio = [
             ['title' => 'Proyecto #1'],
             ['title' => 'Proyecto #2'],
