@@ -7,16 +7,15 @@
     {{-- icono --}}
     <link rel="icon" href="">
     <title>@yield('title', 'Portafolio')</title>
+    <style>
+        .active a {
+            color: red;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">about</a></li>
-            <li><a href="/contact">contact</a></li>
-            <li><a href="/portafolio">portafolio</a></li>
-        </ul>
-    </nav>
+    @include('Partials.nav')
     {{-- esta resibe un parametro para diferenciar --}}
     @yield('content')
 </body>
