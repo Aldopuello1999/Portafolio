@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PortafolioController;
+use App\Http\Messages\MessagesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,8 @@ Route::view('/', 'home')->name('home');
 Route::view('/about', 'about')->name('about');
 Route::get('/portafolio', [PortafolioController::class, 'index'])->name('portafolio');
 Route::view('/contact', 'contact')->name('contact');
+
+Route::post('contact', [MessagesController::class , 'store'])->name('contact');
 
 // Route::resource('projects', [PortafolioController::class]);
 // Route::get('/', function () {
