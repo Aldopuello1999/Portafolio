@@ -3,12 +3,9 @@
 
 @section('title','Contact')
 
-{{-- por parametro recibe el nombre de donde vamos a insertar esta seccion  --}}
+{{-- por parametro recibe el nombre de donde vamos a insertar esta seccion  video 16--}}
 @section('content')
-    <h1>Contact</h1>
-        @if ($errors->any())
-           {{ $errors->first('name') }}
-        @endif
+    <h1>{{ __('Contact') }}</h1>
 
     <form method="POST" action="{{route('contact')}}">
         {{-- esto hace es agregar un campo oculto con el token del usuario y es el encargado de evitar ataques de sumplantacion de identidad, ataque xxs
