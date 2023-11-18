@@ -4,18 +4,20 @@
 @section('title','Portafolio')
 
 
-{{-- por parametro recibe el nombre de donde vamos a insertar esta seccion  video 13 --}}
+{{-- por parametro recibe el nombre de donde vamos a insertar esta seccion  video 21 --}}
 @section('content')
     <h1>Portafolio</h1>
 
     <ul>
         {{-- para validar si existe la variable con el isset --}}
 
-            @forelse($portafolio as $portafolioItem)
-                <li>{{ $portafolioItem['title'] }}</li>
+            @forelse($projects as $project)
+                <li>{{ $project->title }} <br><small></li>
             @empty
                 <li>No hay proyectos a Mostrar</li>
             @endforelse
+
+            {{$projects->links()}}
 
     </ul>
 @endsection
