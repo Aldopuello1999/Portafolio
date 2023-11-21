@@ -8,7 +8,7 @@
 @section('content')
     <h1>{{ __('Contact') }}</h1>
 
-    <form method="POST" action="{{route('contact')}}">
+    <form method="POST" action="{{route('messages.store')}}">
         {{-- esto hace es agregar un campo oculto con el token del usuario y es el encargado de evitar ataques de sumplantacion de identidad, ataque xxs
          (siempre agregar esta directiva dentro de los formularios) --}}
         @csrf
